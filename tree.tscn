@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://de6u2f4rxk1bd"]
+
+[ext_resource type="Texture2D" uid="uid://c2ovhf630womm" path="res://assets/tree1.png" id="1_f5opa"]
+[ext_resource type="Script" path="res://tree.gd" id="2_y0ube"]
+
+[node name="Tree" type="Sprite3D"]
+transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+centered = false
+billboard = 1
+texture = ExtResource("1_f5opa")
+script = ExtResource("2_y0ube")
