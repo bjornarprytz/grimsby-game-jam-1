@@ -1,9 +1,6 @@
-extends Sprite3D
+extends Node3D
+class_name PineTree
 
-@onready var t1 = preload("res://assets/tree1.png")
-@onready var t2 = preload("res://assets/tree1.png")
-@onready var t3 = preload("res://assets/tree1.png")
 
-func _ready() -> void:
-	texture = [t1, t2, t3].pick_random()
+@onready var tree_sprite : Sprite3D = $Tree
 
