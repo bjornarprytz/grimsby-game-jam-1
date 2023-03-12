@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://5we6jxgrgn04"]
+[gd_scene load_steps=9 format=3 uid="uid://5we6jxgrgn04"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_w4wpd"]
 [ext_resource type="Texture2D" uid="uid://b0s45h4vpm3dn" path="res://assets/snow.png" id="2_7nrch"]
@@ -9,6 +9,9 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ut5ut"]
 albedo_texture = ExtResource("2_7nrch")
+
+[sub_resource type="Theme" id="Theme_v5050"]
+default_font_size = 96
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
@@ -36,6 +39,26 @@ current = true
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
 omni_range = 307.573
 omni_attenuation = 0.0980722
+
+[node name="ColorRect" type="ColorRect" parent="Camera"]
+offset_left = 985.0
+offset_top = 510.0
+offset_right = 1149.0
+offset_bottom = 649.0
+color = Color(0.12549, 0.12549, 0.12549, 1)
+
+[node name="TimeLabel" type="Label" parent="Camera/ColorRect"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 2.0
+offset_right = 158.0
+offset_bottom = 137.0
+theme = SubResource("Theme_v5050")
+text = "9.9"
+
+[node name="Timer" type="Timer" parent="Camera"]
+wait_time = 10.0
+autostart = true
 
 [node name="Sky" type="Sprite3D" parent="."]
 transform = Transform3D(-4.37114e-07, 10, 0, -10, -4.37114e-07, 0, 0, 0, 10, 56.9782, -2.4906e-06, -10.5164)

@@ -23,7 +23,7 @@ func spawn_tree():
 
 	# get the tree to the surface
 	tree.tree_sprite.position.x = radius
-	tree.position.y = randf_range(-10, 10)
+	tree.position.y = randf_range(-15, 15)
 	
 	tree.rotation_degrees.y = randf_range(0, 360)
 	tree.tree_sprite.scale = Vector3.ONE * randf_range(0.2, 0.6)
