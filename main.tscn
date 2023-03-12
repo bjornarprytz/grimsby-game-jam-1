@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://5we6jxgrgn04"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_w4wpd"]
-[ext_resource type="Texture2D" uid="uid://b0s45h4vpm3dn" path="res://assets/snow.png" id="2_7nrch"]
+[ext_resource type="Texture2D" uid="uid://cnaye7vrjicnl" path="res://assets/snow.png" id="2_7nrch"]
 [ext_resource type="PackedScene" uid="uid://de6u2f4rxk1bd" path="res://tree.tscn" id="3_8dvd6"]
 [ext_resource type="Script" path="res://ground-control.gd" id="3_55ajx"]
-[ext_resource type="PackedScene" uid="uid://co1f3pns1pv1r" path="res://player.tscn" id="5_yv0o2"]
-[ext_resource type="Texture2D" uid="uid://0c3gc2noplyd" path="res://assets/background.png" id="6_8dk7u"]
+[ext_resource type="PackedScene" path="res://player.tscn" id="5_yv0o2"]
+[ext_resource type="Texture2D" uid="uid://oyp1aioae47v" path="res://assets/background.png" id="6_8dk7u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ut5ut"]
 albedo_texture = ExtResource("2_7nrch")
