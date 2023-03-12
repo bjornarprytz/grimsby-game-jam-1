@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://5we6jxgrgn04"]
+[gd_scene load_steps=8 format=3 uid="uid://5we6jxgrgn04"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_w4wpd"]
-[ext_resource type="Texture2D" uid="uid://cnaye7vrjicnl" path="res://assets/snow.png" id="2_7nrch"]
-[ext_resource type="Texture2D" uid="uid://dodgytnckumsu" path="res://icon.svg" id="2_e8n1i"]
+[ext_resource type="Texture2D" uid="uid://b0s45h4vpm3dn" path="res://assets/snow.png" id="2_7nrch"]
+[ext_resource type="Texture2D" uid="uid://c35iqum0wt7a7" path="res://icon.svg" id="2_e8n1i"]
 [ext_resource type="PackedScene" uid="uid://de6u2f4rxk1bd" path="res://tree.tscn" id="3_8dvd6"]
-[ext_resource type="Texture2D" uid="uid://d8i8btgo2yk" path="res://assets/skiier.png" id="5_jcmxk"]
-[ext_resource type="Script" path="res://player.gd" id="6_ld7l0"]
+[ext_resource type="PackedScene" uid="uid://co1f3pns1pv1r" path="res://player.tscn" id="5_yv0o2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ut5ut"]
 albedo_texture = ExtResource("2_7nrch")
@@ -45,8 +44,5 @@ transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 
 omni_range = 307.573
 omni_attenuation = 0.0980722
 
-[node name="Player" type="Sprite3D" parent="."]
-transform = Transform3D(-1.39439e-08, 0.319, 0, -0.319, -1.39439e-08, 0, 0, 0, 0.319, 19.3199, 0.064176, 10.7717)
-centered = false
-texture = ExtResource("5_jcmxk")
-script = ExtResource("6_ld7l0")
+[node name="Player" parent="." instance=ExtResource("5_yv0o2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.3299, -8.44936e-07, 11.1805)

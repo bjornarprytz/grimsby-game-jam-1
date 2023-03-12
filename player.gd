@@ -1,11 +1,47 @@
-extends Sprite3D
+extends Node3D
 
 @export var speed : float = 10.0
 
+enum DIRECTION
+{
+	STRAIGHT,
+	LEFT,
+	RIGHT
+}
+
+
+var _direction : DIRECTION = DIRECTION.STRAIGHT
+
 func _physics_process(delta: float) -> void:
-	if Input.is_key_pressed(KEY_A):
-		print("RIGHT")
-		translate(Vector3.LEFT * speed * delta)
-	if Input.is_key_pressed(KEY_D):
-		print("RIGHT")
-		translate(Vector3.RIGHT * speed * delta)
+	match _direction:
+		DIRECTION.LEFT:
+			translate(Vector3.UP * speed * delta)
+		DIRECTION.RIGHT:
+			translate(Vector3.DOWN * speed * delta)
+
+func _unhandled_key_input(event):
+	
+	match event.keycode:
+		KEY_A:
+			if (event.is_pressed()):
+				start_turn_left()
+			else:
+				start_turn_straight()
+		KEY_D:
+			if (event.is_pressed()):
+				start_turn_right()
+			else:
+				start_turn_straight()
+
+func start_turn_left():
+	_direction = DIRECTION.LEFT
+	create_tween().tween_property($Sprite, 'rotation_degrees:x', -20, 0.4)
+	
+
+func start_turn_right():
+	_direction = DIRECTION.RIGHT
+	create_tween().tween_property($Sprite, 'rotation_degrees:x', 20, 0.4)
+
+func start_turn_straight():
+	_direction = DIRECTION.STRAIGHT
+	create_tween().tween_property($Sprite, 'rotation:x', 0, 0.4)
